@@ -27,5 +27,12 @@ namespace EcommerceDotNet7Cr202.Server.Controllers
             var result = await _ProductService.GetProductAsync();
             return Ok(result);
         }
+        [HttpGet("{productId}")]
+        public async Task<ActionResult<ServiceResponse<Product>>> GetProduct(int productId)
+        {
+
+            var result = await _ProductService.GetProductAsync(productId);
+            return Ok(result);
+        }
     }
 }
