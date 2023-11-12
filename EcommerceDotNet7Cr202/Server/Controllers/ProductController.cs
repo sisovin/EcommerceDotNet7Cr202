@@ -8,12 +8,12 @@ namespace EcommerceDotNet7Cr202.Server.Controllers
     public class ProductController : ControllerBase
     {
         //private readonly DataContext _context;
-        private readonly IProductService _ProductService;
+        private readonly IProductService _productService;
 
         public ProductController(IProductService productService)
         {
             //_context = context;
-            _ProductService = productService;
+            _productService = productService;
         }
         [HttpGet]
         public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProducts()
@@ -24,14 +24,20 @@ namespace EcommerceDotNet7Cr202.Server.Controllers
             //    Data = products
             //};
             //return Ok(response);
-            var result = await _ProductService.GetProductAsync();
+            var result = await _productService.GetProductAsync();
             return Ok(result);
         }
         [HttpGet("{productId}")]
         public async Task<ActionResult<ServiceResponse<Product>>> GetProduct(int productId)
         {
 
-            var result = await _ProductService.GetProductAsync(productId);
+            var result = await _productService.GetProductAsync(productId);
+            return Ok(result);
+        }
+        [HttpGet("category/{categoryUrl}")]
+        public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProductByCategory(string categoryUrl)
+        {
+            var result = await _productService.GetProductByCategory(categoryUrl);
             return Ok(result);
         }
     }

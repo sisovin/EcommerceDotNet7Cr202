@@ -1,6 +1,7 @@
 ﻿@page "/product-list"
 @inject IProductService ProductService
 
+
 <h3>Products List</h3>
 
 @if (ProductService.Products == null || ProductService.Products.Count == 0)
@@ -24,7 +25,7 @@ else
                     </a>
                     <p>@product.Description</p>
                     <h5 class="price">
-                        $@product.Price
+                       @*  $@product.Price *@
                     </h5>
                 </div>
             </li>
@@ -34,8 +35,12 @@ else
 
 @code {
     
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        await ProductService.GetProducts();
+        ProductService.ProductsChanged += StateHasChanged;
+    }
+    public void Dispose()
+    {
+        ProductService.ProductsChanged -= StateHasChanged;
     }
 }

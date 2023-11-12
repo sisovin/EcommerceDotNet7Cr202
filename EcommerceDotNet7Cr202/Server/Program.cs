@@ -2,6 +2,7 @@ global using EcommerceDotNet7Cr202.Shared;
 global using Microsoft.EntityFrameworkCore;
 global using EcommerceDotNet7Cr202.Server.Data;
 global using EcommerceDotNet7Cr202.Server.Services.ProductService;
+global using EcommerceDotNet7Cr202.Server.Services.CategoryService;
 global using System.Net.Http.Json;
 using Microsoft.AspNetCore.ResponseCompression;
 
@@ -22,6 +23,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 
 var app = builder.Build();
