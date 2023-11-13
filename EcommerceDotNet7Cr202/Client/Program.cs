@@ -1,10 +1,11 @@
 global using EcommerceDotNet7Cr202.Shared;
 global using EcommerceDotNet7Cr202.Client.Pages;
+global using EcommerceDotNet7Cr202.Client.Shared;
 global using EcommerceDotNet7Cr202.Client.Services.ProductService;
 global using EcommerceDotNet7Cr202.Client.Services.CategoryService;
+global using Microsoft.AspNetCore.Components.Web;
 global using System.Net.Http.Json;
 using EcommerceDotNet7Cr202.Client;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
 

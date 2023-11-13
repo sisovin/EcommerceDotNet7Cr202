@@ -15,11 +15,6 @@
     text-align: center;
 }
 
-.price {
-    color: green;
-    font-weight: bold;
-}
-
 @media (max-width: 1599.98px) {
     .media-img-wrapper {
         margin: 20px;

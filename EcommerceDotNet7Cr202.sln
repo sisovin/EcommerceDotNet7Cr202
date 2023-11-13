@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceDotNet7Cr202.Server", "EcommerceDotNet7Cr202\Server\EcommerceDotNet7Cr202.Server.csproj", "{146028F9-57A5-4B3E-8BDE-383F20AF9804}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcommerceDotNet7Cr202.Server", "EcommerceDotNet7Cr202\Server\EcommerceDotNet7Cr202.Server.csproj", "{146028F9-57A5-4B3E-8BDE-383F20AF9804}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceDotNet7Cr202.Client", "EcommerceDotNet7Cr202\Client\EcommerceDotNet7Cr202.Client.csproj", "{FB064F1F-B634-4E37-93FC-319B5B00CBE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcommerceDotNet7Cr202.Client", "EcommerceDotNet7Cr202\Client\EcommerceDotNet7Cr202.Client.csproj", "{FB064F1F-B634-4E37-93FC-319B5B00CBE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcommerceDotNet7Cr202.Shared", "EcommerceDotNet7Cr202\Shared\EcommerceDotNet7Cr202.Shared.csproj", "{E1F2760D-F893-40B2-B1DC-98CF87564EDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcommerceDotNet7Cr202.Shared", "EcommerceDotNet7Cr202\Shared\EcommerceDotNet7Cr202.Shared.csproj", "{E1F2760D-F893-40B2-B1DC-98CF87564EDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

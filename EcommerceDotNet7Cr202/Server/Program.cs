@@ -5,7 +5,7 @@ global using EcommerceDotNet7Cr202.Server.Services.ProductService;
 global using EcommerceDotNet7Cr202.Server.Services.CategoryService;
 global using System.Net.Http.Json;
 using Microsoft.AspNetCore.ResponseCompression;
-
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,11 +47,14 @@ app.UseHttpsRedirection();
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
+//app.UseAuthorization();
+
 app.UseRouting();
 
 
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
 
 app.Run();
