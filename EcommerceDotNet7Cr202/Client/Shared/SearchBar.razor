@@ -4,9 +4,8 @@
 <div class="input-group">
     <input 
         @bind-value="searchText"
-        @bind-value:event="onchange"
-        type="text"
-        typeof="search"
+        @bind-value:event="oninput"
+        type="search"
         list="products"
         onkeyup="HandleSearch"
         class="form-control"
@@ -17,7 +16,7 @@
     <datalist id="products">
         @foreach (var suggestion in suggestions)
         {
-            <option value="@suggestion"></option>
+            <option>@suggestion</option>
         }
     </datalist>
     <div class="input-group-append">
@@ -41,12 +40,7 @@
     }
     public void SearchProducts()
     {
-        if (string.IsNullOrEmpty(searchText))
-        {
-            return;
-        }
-
-        NavigationManager.NavigateTo($"/search/{searchText}");
+       NavigationManager.NavigateTo($"/search/{searchText}");
     }
     public async Task HandleSearch(KeyboardEventArgs args)
     {

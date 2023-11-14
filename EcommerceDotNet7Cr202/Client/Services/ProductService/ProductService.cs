@@ -38,18 +38,18 @@ namespace EcommerceDotNet7Cr202.Client.Services.ProductService
 
         public async Task<List<string>> GetProductSearchSuggestions(string searchText)
         {
-            var result = await _http.GetFromJsonAsync<ServiceResponse<List<string>>>($"api/product/searchsuggestions/{searchText}");
+            var result = await _http
+              .GetFromJsonAsync<ServiceResponse<List<string>>>($"api/product/searchsuggestions/{searchText}?searchText={searchText}");
             return result.Data;
         }
 
         public async Task SearchProducts(string searchText)
         {
-            var result = await _http.GetFromJsonAsync<ServiceResponse<List<Product>>>($"api/product/search/{searchText}");
+            var result = await _http
+                .GetFromJsonAsync<ServiceResponse<List<Product>>>($"api/product/search/{searchText}?searchText={searchText}");
             if (result != null && result.Data != null)
                 Products = result.Data;
-            if (Products.Count == 0)
-                Message = "No products ware found";
-
+            if (Products.Count == 0) Message = "No products ware found.";
             ProductsChanged?.Invoke();
         }
     }
